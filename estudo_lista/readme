@@ -1,1 +1,11 @@
+>>> lista encadeadas sao uma sequencia de nós, onde cada no possui um item e um ponteiro apontando ao proximo nó
+    endereço do primeiro nó --> a apartir disso pode acessar a sequencia de nos
+    ultimo no nao tem ponteiro --> ponteiro = NULL
+    primeiro no com valor NULL é uma lista VAZIA
+
+>>> cada no tem seu tipo de dado e seu ponteiro
+    o ponteiro deve ser do tipo da estrutura que nos definimos , POR ISSO --> struct no *prox;
+
+>>> para facilitar para criaçao de elementos no,usamos typerdef ---> typerdef struct no No ----> No no1;
+
 
