@@ -10,7 +10,6 @@ queue<char> aux; //declarando uma fila de caracteres vazia chamada 'aux'
         (*pilha).pop(); //remove o mesmo caractere da fila original
     }
 
-    //depois que a fila apontada por 'pilha' for vazia
     (*pilha).push(item); //insere o caractere 'item' no final da fila apontada por 'pilha'
 
     while ( !aux.empty() ){ //enquanto a fila 'aux' nao estiver vazia
