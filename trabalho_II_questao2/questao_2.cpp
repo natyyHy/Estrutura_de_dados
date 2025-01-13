@@ -34,7 +34,7 @@ int main() { //declarando main
     empilhar(&pilha, 'e'); // status pilha --> e a m
 
     while ( ! pilha.empty() ){ //enquanto a fila chamada 'pilha' nao estiver vazia
-        printf("%c", desempilhar(&pilha) ); // removar o primeiro caractere de 'pilha' e imprimar
+        printf("%c", desempilhar(&pilha) ); // remover o primeiro caractere de 'pilha' e imprimar
     }
 
     return 0;
