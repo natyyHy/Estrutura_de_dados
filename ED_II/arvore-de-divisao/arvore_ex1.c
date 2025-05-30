@@ -26,7 +26,7 @@ void trocar(int *valor1, int *valor2) {
     *valor2 = temp;
 }
 
-void arrayParaString(int array[], int tamanho, char* destino) {
+void array_para_string(int array[], int tamanho, char* destino) {
     destino[0] = '\0'; // Zera a string
     char buffer[10];
     for (int i = 0; i < tamanho; i++) {
@@ -40,23 +40,19 @@ void arrayParaString(int array[], int tamanho, char* destino) {
 void bubbleSort(int array[], int tamanho, No** arvoreDecisao) {
     No* atual = NULL;
 
-    char ramo[5];
-
-    for (int i = 0; i < tamanho; i++) {
-        for (int j = 0; j < tamanho - 1; j++) {
-            printf("%d ", array[j]);
+    for (int etapa = 0; etapa < tamanho - 1; ++etapa) {
+        for (int i = 0; i < tamanho - etapa - 1; ++i) {
+            char comparacao[20], folha[20], ramo[5];
             sprintf(ramo, "Nao");
-            char comparacao[20];
-            char folha[20];
 
-            if (array[j] > array[j + 1]) {
+            if (array[i] > array[i + 1]) {
                 sprintf(ramo, "Sim");
-                trocar(&array[j], &array[j + 1]);
-                sprintf(comparacao, "[ %d > %d ]", array[j + 1], array[j]);
-                arrayParaString(array, tamanho, folha);
+                trocar(&array[i], &array[i + 1]);
+                sprintf(comparacao, "[ %d > %d ]", array[i + 1], array[i]);
+                array_para_string(array, tamanho, folha);
             } else {
-                sprintf(comparacao, "[ %d < %d ]", array[j], array[j + 1]);
-                arrayParaString(array, tamanho, folha);
+                sprintf(comparacao, "[ %d < %d ]", array[i], array[i + 1]);
+                array_para_string(array, tamanho, folha);
             }
 
             No* novoNo = criarArvoreDecisao(comparacao, folha, ramo);
@@ -85,7 +81,6 @@ void percorrerArvoreDecisao(No* arvore) {
     percorrerArvoreDecisao(arvore->nao);
 }
 
-
 void liberarArvore(No* arvore) {
     if (arvore == NULL) return;
     liberarArvore(arvore->sim);
@@ -101,7 +96,7 @@ int main() {
 
     bubbleSort(vetor, tamanho, &arvoreDecisao);
 
-    printf("\nArvore de Decisao:\n");
+    printf("Arvore de Decisao:\n");
     percorrerArvoreDecisao(arvoreDecisao);
 
     liberarArvore(arvoreDecisao);
