@@ -14,10 +14,10 @@ int menorCusto = 999;
 // Matriz de custos de troca entre as tarefas
 // Exemplo: custoTroca[0][1] é o custo de ir de 'A' para 'B'
 int custoTroca[tamanho][tamanho] = 
-    {       /* N   L   T*/  
-      /*N*/  { 0 , 2 , 4 },
-      /*L*/  { 2 , 0 , 1 },
-      /*T*/  { 4 , 1 , 0 }
+    {       /* A   B   C*/  
+      /*A*/  { 0 , 2 , 4 },
+      /*B*/  { 2 , 0 , 1 },
+      /*C*/  { 4 , 1 , 0 }
     };
 
 // Função que avalia o custo de um caminho (ordem das tarefas)
