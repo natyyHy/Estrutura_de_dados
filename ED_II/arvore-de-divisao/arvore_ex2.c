@@ -85,7 +85,7 @@ void permutar(int vetor[], int inicio)
 
 int main()
 {
-    int caminho[tamanho];
+    int caminho[tamanho]; // 0 1 2
 
     // Inicializa o vetor caminho com os índices das tarefas
     for (int i = 0; i < tamanho; i++)
